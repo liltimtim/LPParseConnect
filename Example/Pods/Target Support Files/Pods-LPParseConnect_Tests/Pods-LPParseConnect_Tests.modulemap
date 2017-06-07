@@ -1,0 +1,6 @@
+framework module Pods_LPParseConnect_Tests {
+  umbrella header "Pods-LPParseConnect_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

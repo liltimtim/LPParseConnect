@@ -1,0 +1,6 @@
+framework module LPParseConnect {
+  umbrella header "LPParseConnect-umbrella.h"
+
+  export *
+  module * { export * }
+}

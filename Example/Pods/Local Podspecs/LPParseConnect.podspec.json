@@ -1,0 +1,27 @@
+{
+  "name": "LPParseConnect",
+  "version": "0.1.0",
+  "summary": "A short description of LPParseConnect.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/liltimtim/LPParseConnect",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liltimtim": "tim@launchpeer.com"
+  },
+  "source": {
+    "git": "https://github.com/liltimtim/LPParseConnect.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "LPParseConnect/Classes/**/*",
+  "dependencies": {
+    "Parse": [
+
+    ]
+  }
+}

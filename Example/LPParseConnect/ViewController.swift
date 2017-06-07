@@ -9,7 +9,7 @@
 import UIKit
 import LPParseConnect
 import Parse
-import UserNotifications
+
 class ViewController: UIViewController {
     @IBOutlet weak var login:UIButton!
     internal var authProvider:StandardAuthProvider?

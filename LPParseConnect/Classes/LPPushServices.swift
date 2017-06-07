@@ -9,15 +9,18 @@
 import Foundation
 import UserNotifications
 import Parse
+
+@available (iOS 10, *)
 open class LPPushServices: NSObject {
     weak var delegate:LPEmittableProtocol?
-    @available (iOS 10, *)
-    
     public init(delegate: LPEmittableProtocol?) {
         super.init()
         self.delegate = delegate
     }
-    
+    /**
+     Registers for push notification 
+     - parameter options: can be a single option or an array of options such as badge, alert or sound
+    */
     public func registerPushNotifications(options: UNAuthorizationOptions) {
         let center = UNUserNotificationCenter.current()
 

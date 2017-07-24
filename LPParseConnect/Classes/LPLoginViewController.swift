@@ -20,7 +20,7 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
     internal var provider:StandardAuthProvider?
     override open func viewDidLoad() {
         super.viewDidLoad()
-        validator.registerField(usernameField, rules: [RequiredRule(), EmailRule()])
+        validator.registerField(usernameField, rules: [RequiredRule()])
         validator.registerField(passwordField, rules: [RequiredRule()])
         setupFields()
         loginBtn.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)

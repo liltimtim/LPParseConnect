@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'UserNotifications'
   # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'Parse'
+    s.dependency 'SwiftValidator'
 end

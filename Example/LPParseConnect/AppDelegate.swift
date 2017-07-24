@@ -17,8 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        LPConnect.setup(appId: "your_app_id", serverURL: "http://192.168.1.148:1337/parse", clientKey: "client_key", useLocalDatastore: true)
+        LPConnect.setup(appId: "your_app_id", serverURL: "http://127.0.0.1:1337/parse", clientKey: "client_key", useLocalDatastore: true)
         PFAnalytics.trackAppOpened(launchOptions: launchOptions)
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = LoginViewController.loadFromXIB(type: LoginViewController.self)
+        self.window?.makeKeyAndVisible()
         return true
     }
 

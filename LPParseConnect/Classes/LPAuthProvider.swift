@@ -14,7 +14,8 @@ import Parse
 }
 
 @objc public protocol LPAuthEmittableProtocol: class, LPEmittableProtocol {
-    func didAuthenticate()
+    @objc optional func didAuthenticate()
+    @objc optional func didSignup()
 }
 
 open class StandardAuthProvider : LPAuthProviderProtocol {
@@ -40,7 +41,7 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
                 return
             }
             
-            self.delegate?.didAuthenticate()
+            self.delegate?.didAuthenticate?()
         }
     }
     
@@ -58,7 +59,7 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
                 self.delegate?.didEmit(error: AuthorizationError.unknown)
                 return
             }
-            self.delegate?.didAuthenticate()
+            self.delegate?.didAuthenticate?()
         }
     }
     

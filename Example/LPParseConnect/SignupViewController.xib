@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController" customModule="LPParseConnect_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="emailField" destination="X7m-37-8gg" id="3fI-XI-bjh"/>
+                <outlet property="passwordField" destination="gR1-I7-lts" id="YP7-Cb-7KY"/>
+                <outlet property="signupBtn" destination="xiQ-vR-hUf" id="434-mX-uWQ"/>
+                <outlet property="usernameField" destination="z9y-wZ-AaH" id="lFr-bJ-kzD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiQ-vR-hUf" customClass="UIButton_LPActivity" customModule="LPParseConnect">
+                    <rect key="frame" x="25" y="468.5" width="325" height="30"/>
+                    <state key="normal" title="Signup"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7m-37-8gg">
+                    <rect key="frame" x="25" y="318.5" width="325" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9y-wZ-AaH">
+                    <rect key="frame" x="25" y="368.5" width="325" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gR1-I7-lts">
+                    <rect key="frame" x="25" y="418.5" width="325" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xiQ-vR-hUf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="3KX-72-h9J"/>
+                <constraint firstItem="z9y-wZ-AaH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="Ffk-ma-DDQ"/>
+                <constraint firstAttribute="trailing" secondItem="z9y-wZ-AaH" secondAttribute="trailing" constant="25" id="S1e-1g-zh3"/>
+                <constraint firstItem="gR1-I7-lts" firstAttribute="top" secondItem="z9y-wZ-AaH" secondAttribute="bottom" constant="20" id="YTO-fE-vXD"/>
+                <constraint firstAttribute="trailing" secondItem="X7m-37-8gg" secondAttribute="trailing" constant="25" id="Z5m-9p-BBA"/>
+                <constraint firstAttribute="trailing" secondItem="xiQ-vR-hUf" secondAttribute="trailing" constant="25" id="eP0-bl-ctr"/>
+                <constraint firstItem="X7m-37-8gg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="gj1-cB-wTP"/>
+                <constraint firstItem="xiQ-vR-hUf" firstAttribute="top" secondItem="gR1-I7-lts" secondAttribute="bottom" constant="20" id="hJH-Jq-XUy"/>
+                <constraint firstItem="X7m-37-8gg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wmy-FV-qX7"/>
+                <constraint firstItem="z9y-wZ-AaH" firstAttribute="top" secondItem="X7m-37-8gg" secondAttribute="bottom" constant="20" id="x5l-Pv-fKT"/>
+                <constraint firstItem="X7m-37-8gg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="z6Q-DT-jv3"/>
+                <constraint firstItem="gR1-I7-lts" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="zAU-8V-kj9"/>
+                <constraint firstAttribute="trailing" secondItem="gR1-I7-lts" secondAttribute="trailing" constant="25" id="zPK-o1-Nq7"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

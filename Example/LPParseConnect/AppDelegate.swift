@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpened(launchOptions: launchOptions)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = LoginViewController.loadFromXIB(type: LoginViewController.self)
+        self.window?.rootViewController = SignupViewController.loadFromXIB(type: SignupViewController.self)
         self.window?.makeKeyAndVisible()
         return true
     }

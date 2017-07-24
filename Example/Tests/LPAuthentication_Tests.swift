@@ -36,7 +36,7 @@ class MockStandardAuthProvider: StandardAuthProvider {
     var shouldAuthSuccess:Bool = true
     override func authenticate(username: String, password: String) {
         if shouldAuthSuccess {
-            self.delegate?.didAuthenticate()
+            self.delegate?.didAuthenticate?()
         } else {
             self.delegate?.didEmit(error: AuthorizationError.unknown)
         }

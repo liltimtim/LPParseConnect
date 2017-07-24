@@ -25,6 +25,7 @@ open class LPSignupViewController: UIViewController {
         validator.registerField(passwordField, rules: [RequiredRule()])
         validator.registerField(emailField, rules: [RequiredRule(), EmailRule()])
         setupFields()
+        signupBtn.addTarget(self, action: #selector(signUpPressed), for: .touchUpInside)
     }
 
     override open func didReceiveMemoryWarning() {
@@ -34,6 +35,7 @@ open class LPSignupViewController: UIViewController {
     
     internal func signUpPressed() {
         signupBtn.beginActivity()
+        validator.validate(self)
     }
     
     internal func signup(email:String, username:String, password:String) {
@@ -60,7 +62,7 @@ extension LPSignupViewController : LPAuthEmittableProtocol {
         self.present(UIAlertController.createErrorAlert(error: error), animated: true, completion: nil)
     }
     
-    public func didSignup() {
+    public func didAuthenticate() {
         signupBtn.endActivity()
         self.delegate?.didFinishSignup()
     }

@@ -11,14 +11,14 @@ import SwiftValidator
 public protocol LPLoginViewControllerProtocol: class {
     func didFinishAuthenticating()
 }
-public class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
+open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
     @IBOutlet public weak var usernameField:UITextField!
     @IBOutlet public weak var passwordField:UITextField!
     @IBOutlet public weak var loginBtn:UIButton_LPActivity!
     public weak var delegate:LPLoginViewControllerProtocol?
     internal var validator:Validator = Validator()
     internal var provider:StandardAuthProvider?
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         validator.registerField(usernameField, rules: [RequiredRule(), EmailRule()])
         validator.registerField(passwordField, rules: [RequiredRule()])
@@ -26,7 +26,7 @@ public class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
         loginBtn.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
     }
 
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
@@ -50,7 +50,7 @@ public class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
         self.delegate?.didFinishAuthenticating()
     }
     
-    public func setupFields() {
+    open func setupFields() {
         usernameField.autocorrectionType = .no
         usernameField.autocapitalizationType = .none
         passwordField.isSecureTextEntry = true

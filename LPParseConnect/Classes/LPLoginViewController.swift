@@ -45,7 +45,7 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
         self.present(UIAlertController.createErrorAlert(error: error), animated: true, completion: nil)
     }
     
-    public func didAuthenticate() {
+    open func didAuthenticate() {
         loginBtn.endActivity()
         self.delegate?.didFinishAuthenticating()
     }

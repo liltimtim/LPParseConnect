@@ -4,6 +4,7 @@ use_frameworks!
 target 'LPParseConnect_Example' do
   pod 'LPParseConnect', :path => '../'
   pod 'Parse'
+  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 
   target 'LPParseConnect_Tests' do
     inherit! :search_paths

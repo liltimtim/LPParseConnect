@@ -2,22 +2,34 @@ PODS:
   - Bolts/Tasks (1.8.4)
   - LPParseConnect (0.1.0):
     - Parse
-  - Parse (1.14.4):
+    - SwiftValidator
+  - Parse (1.15.1):
     - Bolts/Tasks (~> 1.8)
+  - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - LPParseConnect (from `../`)
   - Parse
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 EXTERNAL SOURCES:
   LPParseConnect:
     :path: ../
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  LPParseConnect: 31e15505416ea42c82207e6485548da54a193e25
-  Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
+  LPParseConnect: 676e81e0acd3493b190944008ed32f94b5b15fa1
+  Parse: b7a77b20b8a6dede8058da1e2b339593578ce158
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: 10c1f1de35f9662f887fa21bf5b739ef1c3723ac
+PODFILE CHECKSUM: 572db4e46b7fe54a52277480fb6b177731f17556
 
 COCOAPODS: 1.2.1

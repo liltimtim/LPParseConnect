@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LPParseConnect_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="loginBtn" destination="M5L-5U-yNd" id="5IG-b1-o9T"/>
+                <outlet property="passwordField" destination="hPg-2S-9bB" id="UDy-yg-fRK"/>
+                <outlet property="usernameField" destination="4gU-vf-Gwx" id="4ZC-1T-FrK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gU-vf-Gwx">
+                    <rect key="frame" x="25" y="318.5" width="325" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPg-2S-9bB">
+                    <rect key="frame" x="25" y="368.5" width="325" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-5U-yNd" customClass="UIButton_LPActivity" customModule="LPParseConnect">
+                    <rect key="frame" x="25" y="418.5" width="325" height="30"/>
+                    <state key="normal" title="Login"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hPg-2S-9bB" firstAttribute="top" secondItem="4gU-vf-Gwx" secondAttribute="bottom" constant="20" id="41n-Ro-t3b"/>
+                <constraint firstItem="4gU-vf-Gwx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="587-pK-0jJ"/>
+                <constraint firstItem="M5L-5U-yNd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="IhH-Qv-Qca"/>
+                <constraint firstItem="M5L-5U-yNd" firstAttribute="top" secondItem="hPg-2S-9bB" secondAttribute="bottom" constant="20" id="KbO-Qg-oH3"/>
+                <constraint firstAttribute="trailing" secondItem="hPg-2S-9bB" secondAttribute="trailing" constant="25" id="NyQ-Lm-yDo"/>
+                <constraint firstAttribute="trailing" secondItem="M5L-5U-yNd" secondAttribute="trailing" constant="25" id="OXl-J2-Oxg"/>
+                <constraint firstAttribute="trailing" secondItem="4gU-vf-Gwx" secondAttribute="trailing" constant="25" id="VvI-gd-NCl"/>
+                <constraint firstItem="4gU-vf-Gwx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xeW-A8-iHy"/>
+                <constraint firstItem="4gU-vf-Gwx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="yCv-Km-zo1"/>
+                <constraint firstItem="hPg-2S-9bB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="yVH-fh-eGW"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

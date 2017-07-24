@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5D1682561EE7185800143DE3 /* LPAuthentication_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1682551EE7185800143DE3 /* LPAuthentication_Tests.swift */; };
+		5DA8A1B81F26634E00BBD78D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8A1B61F26634E00BBD78D /* LoginViewController.swift */; };
+		5DA8A1B91F26634E00BBD78D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8A1B71F26634E00BBD78D /* LoginViewController.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		4AB9E807DAD2552363CDEBC5 /* Pods-LPParseConnect_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPParseConnect_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPParseConnect_Tests/Pods-LPParseConnect_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		520BFE90FE0709909CE108DA /* Pods-LPParseConnect_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPParseConnect_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPParseConnect_Example/Pods-LPParseConnect_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5D1682551EE7185800143DE3 /* LPAuthentication_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPAuthentication_Tests.swift; sourceTree = "<group>"; };
+		5DA8A1B61F26634E00BBD78D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5DA8A1B71F26634E00BBD78D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5DC562C31EE7321100D4E526 /* LPParseConnect_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LPParseConnect_Example.entitlements; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LPParseConnect_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPParseConnect_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				5DA8A1B61F26634E00BBD78D /* LoginViewController.swift */,
+				5DA8A1B71F26634E00BBD78D /* LoginViewController.xib */,
 			);
 			name = "Example for LPParseConnect";
 			path = LPParseConnect;
@@ -260,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8A1B91F26634E00BBD78D /* LoginViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -373,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA8A1B81F26634E00BBD78D /* LoginViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

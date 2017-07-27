@@ -69,11 +69,11 @@ extension LPSignupViewController : LPAuthEmittableProtocol {
 }
 
 extension LPSignupViewController : ValidationDelegate {
-    public func validationSuccessful() {
+    open func validationSuccessful() {
         self.signup(email: emailField.text!, username: usernameField.text!, password: passwordField.text!)
     }
     
-    public func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+    open func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         signupBtn.endActivity()
         for(item, _) in errors {
             if let field = item as? UITextField {

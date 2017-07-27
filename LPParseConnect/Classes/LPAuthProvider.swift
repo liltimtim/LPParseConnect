@@ -62,5 +62,14 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
             self.authenticate(username: username, password: password)
         }
     }
+    open func createUser(user:PFUser, success: @escaping(_ user: PFUser)->Void, error: @escaping(_ err:Error)->Void) {
+        user.signUpInBackground { (result, err) in
+            guard err == nil else {
+                error(err!)
+                return
+            }
+            success(user)
+        }
+    }
     
 }

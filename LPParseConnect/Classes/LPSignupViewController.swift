@@ -33,12 +33,12 @@ open class LPSignupViewController: UIViewController {
 
     }
     
-    internal func signUpPressed() {
+    open func signUpPressed() {
         signupBtn.beginActivity()
         validator.validate(self)
     }
     
-    internal func signup(email:String, username:String, password:String) {
+    open func signup(email:String, username:String, password:String) {
         provider = StandardAuthProvider.init(delegate: self)
         provider?.createUser(username: username, email: email, password: password)
     }

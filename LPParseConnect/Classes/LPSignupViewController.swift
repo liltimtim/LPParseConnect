@@ -18,7 +18,7 @@ open class LPSignupViewController: UIViewController {
     @IBOutlet open weak var signupBtn:UIButton_LPActivity!
     open weak var delegate:LPSignupViewControllerProtocol?
     open var provider:StandardAuthProvider?
-    internal let validator:Validator = Validator()
+    open let validator:Validator = Validator()
     override open func viewDidLoad() {
         super.viewDidLoad()
         validator.registerField(usernameField, rules: [RequiredRule()])

@@ -18,7 +18,7 @@ open class LPSignupViewController: UIViewController {
     @IBOutlet open weak var signupBtn:UIButton_LPActivity!
     open weak var delegate:LPSignupViewControllerProtocol?
     open var provider:StandardAuthProvider?
-    internal let validator:Validator = Validator()
+    open let validator:Validator = Validator()
     override open func viewDidLoad() {
         super.viewDidLoad()
         validator.registerField(usernameField, rules: [RequiredRule()])
@@ -33,12 +33,12 @@ open class LPSignupViewController: UIViewController {
 
     }
     
-    internal func signUpPressed() {
+    open func signUpPressed() {
         signupBtn.beginActivity()
         validator.validate(self)
     }
     
-    internal func signup(email:String, username:String, password:String) {
+    open func signup(email:String, username:String, password:String) {
         provider = StandardAuthProvider.init(delegate: self)
         provider?.createUser(username: username, email: email, password: password)
     }
@@ -69,11 +69,11 @@ extension LPSignupViewController : LPAuthEmittableProtocol {
 }
 
 extension LPSignupViewController : ValidationDelegate {
-    public func validationSuccessful() {
+    open func validationSuccessful() {
         self.signup(email: emailField.text!, username: usernameField.text!, password: passwordField.text!)
     }
     
-    public func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+    open func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         signupBtn.endActivity()
         for(item, _) in errors {
             if let field = item as? UITextField {

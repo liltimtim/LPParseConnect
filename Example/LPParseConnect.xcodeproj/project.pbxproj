@@ -10,6 +10,7 @@
 		5D1682561EE7185800143DE3 /* LPAuthentication_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1682551EE7185800143DE3 /* LPAuthentication_Tests.swift */; };
 		5D4025221F2670120032AF17 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4025201F2670120032AF17 /* SignupViewController.swift */; };
 		5D4025231F2670120032AF17 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4025211F2670120032AF17 /* SignupViewController.xib */; };
+		5D4025661F267DF90032AF17 /* LoginViewController_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4025651F267DF90032AF17 /* LoginViewController_Tests.swift */; };
 		5DA8A1B81F26634E00BBD78D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8A1B61F26634E00BBD78D /* LoginViewController.swift */; };
 		5DA8A1B91F26634E00BBD78D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA8A1B71F26634E00BBD78D /* LoginViewController.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		5D1682551EE7185800143DE3 /* LPAuthentication_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPAuthentication_Tests.swift; sourceTree = "<group>"; };
 		5D4025201F2670120032AF17 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		5D4025211F2670120032AF17 /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		5D4025651F267DF90032AF17 /* LoginViewController_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController_Tests.swift; sourceTree = "<group>"; };
 		5DA8A1B61F26634E00BBD78D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5DA8A1B71F26634E00BBD78D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5DC562C31EE7321100D4E526 /* LPParseConnect_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LPParseConnect_Example.entitlements; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5D4025651F267DF90032AF17 /* LoginViewController_Tests.swift */,
 				5D1682551EE7185800143DE3 /* LPAuthentication_Tests.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -398,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D4025661F267DF90032AF17 /* LoginViewController_Tests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				5D1682561EE7185800143DE3 /* LPAuthentication_Tests.swift in Sources */,
 			);

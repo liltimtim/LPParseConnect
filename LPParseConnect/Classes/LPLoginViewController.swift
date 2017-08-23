@@ -11,13 +11,13 @@ import SwiftValidator
 public protocol LPLoginViewControllerProtocol: class {
     func didFinishAuthenticating()
 }
-open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
+open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol, ValidationDelegate {
     @IBOutlet public weak var usernameField:UITextField!
     @IBOutlet public weak var passwordField:UITextField!
     @IBOutlet public weak var loginBtn:UIButton_LPActivity!
     public weak var delegate:LPLoginViewControllerProtocol?
-    internal var validator:Validator = Validator()
-    internal var provider:StandardAuthProvider?
+    open var validator:Validator = Validator()
+    open var provider:StandardAuthProvider?
     override open func viewDidLoad() {
         super.viewDidLoad()
         validator.registerField(usernameField, rules: [RequiredRule()])
@@ -55,14 +55,14 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol {
         usernameField.autocapitalizationType = .none
         passwordField.isSecureTextEntry = true
     }
-}
-
-extension LPLoginViewController : ValidationDelegate {
-    public func validationSuccessful() {
+    
+    // MARK: SwiftValidator delegate methods
+    
+    open func validationSuccessful() {
         self.login(username: usernameField.text!, password: passwordField.text!)
     }
     
-    public func validationFailed(_ errors: [(Validatable, ValidationError)]) {
+    open func validationFailed(_ errors: [(Validatable, ValidationError)]) {
         loginBtn.endActivity()
         for(item, _) in errors {
             if let field = item as? UITextField {
@@ -71,5 +71,6 @@ extension LPLoginViewController : ValidationDelegate {
         }
     }
 }
+
 
 

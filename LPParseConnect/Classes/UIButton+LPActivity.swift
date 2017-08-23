@@ -23,7 +23,7 @@ public class UIButton_LPActivity: UIButton {
     }
     
     public func beginActivity() {
-        DispatchQueue.main.async { [unowned self] in
+        DispatchQueue.main.async {
             self.currentButtonTitle = self.titleLabel?.text
             self.setTitle(nil, for: .normal)
             self.isEnabled = false

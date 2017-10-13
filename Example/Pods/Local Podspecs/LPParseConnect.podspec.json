@@ -1,6 +1,6 @@
 {
   "name": "LPParseConnect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "Connector for Parse LP Server",
   "description": "Connect to Parse easily",
   "homepage": "https://github.com/liltimtim/LPParseConnect",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/liltimtim/LPParseConnect.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "10.0"
@@ -25,6 +25,9 @@
 
     ],
     "SwiftValidator": [
+
+    ],
+    "LPCommonUI": [
 
     ]
   }

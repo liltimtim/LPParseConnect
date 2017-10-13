@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import LPCommonUI
 public protocol LPLoginViewControllerProtocol: class {
     func didFinishAuthenticating()
 }
@@ -42,6 +43,7 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol, Val
     
     public func didEmit(error: Error) {
         loginBtn.endActivity()
+        
         self.present(UIAlertController.createErrorAlert(error: error), animated: true, completion: nil)
     }
     

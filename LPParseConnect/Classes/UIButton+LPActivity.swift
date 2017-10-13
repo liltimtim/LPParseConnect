@@ -8,14 +8,13 @@
 
 import UIKit
 @IBDesignable
-public class UIButton_LPActivity: UIButton {
-
-    @IBInspectable public var cornerRadius:CGFloat = 0.0
-    @IBInspectable public var borderColor:UIColor = UIColor.clear
-    @IBInspectable public var borderWidth:CGFloat = 0.0
+open class UIButton_LPActivity: UIButton {
+    @IBInspectable open var cRadius:CGFloat = 0.0
+    @IBInspectable open var borderColor:UIColor = UIColor.clear
+    @IBInspectable open var borderWidth:CGFloat = 0.0
     private var activityView:UIActivityIndicatorView?
     private var currentButtonTitle:String?
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         layer.cornerRadius = cornerRadius
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth

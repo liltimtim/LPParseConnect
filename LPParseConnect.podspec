@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LPParseConnect'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Connector for Parse LP Server'
 
   s.description      = 'Connect to Parse easily'
@@ -22,4 +22,5 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'Parse'
     s.dependency 'SwiftValidator'
+    s.dependency 'LPCommonUI'
 end

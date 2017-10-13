@@ -1,6 +1,8 @@
 PODS:
   - Bolts/Tasks (1.8.4)
-  - LPParseConnect (0.1.1):
+  - LPCommonUI (1.0.2)
+  - LPParseConnect (0.1.2):
+    - LPCommonUI
     - Parse
     - SwiftValidator
   - Parse (1.15.2):
@@ -8,11 +10,14 @@ PODS:
   - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
+  - LPCommonUI (from `https://github.com/Launchpeer/LPCommonUI_iOS.git`)
   - LPParseConnect (from `../`)
   - Parse
   - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 EXTERNAL SOURCES:
+  LPCommonUI:
+    :git: https://github.com/Launchpeer/LPCommonUI_iOS.git
   LPParseConnect:
     :path: ../
   SwiftValidator:
@@ -20,16 +25,20 @@ EXTERNAL SOURCES:
     :git: https://github.com/jpotts18/SwiftValidator.git
 
 CHECKOUT OPTIONS:
+  LPCommonUI:
+    :commit: 6c8a2f135d1dc132b0d379f581367e129b98f7cf
+    :git: https://github.com/Launchpeer/LPCommonUI_iOS.git
   SwiftValidator:
     :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
     :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  LPParseConnect: 5e621bb6d3fe94bc252a0cdf7a905ef1a54bf1ed
+  LPCommonUI: cb496fa8380781abd2f00564be57d9e4282eb78c
+  LPParseConnect: 1b2dc912f5a973c7a2fd9cc38b799ad43f496bbd
   Parse: 7daa8804b876d250a65420534c97d2d786c3b0b4
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: 572db4e46b7fe54a52277480fb6b177731f17556
+PODFILE CHECKSUM: 3188fa6d3fc673f75b08aef71455d09d69cda110
 
 COCOAPODS: 1.2.1

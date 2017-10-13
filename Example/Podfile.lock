@@ -1,9 +1,9 @@
 PODS:
   - Bolts/Tasks (1.8.4)
-  - LPParseConnect (0.1.0):
+  - LPParseConnect (0.1.1):
     - Parse
     - SwiftValidator
-  - Parse (1.15.1):
+  - Parse (1.15.2):
     - Bolts/Tasks (~> 1.8)
   - SwiftValidator (4.0.0)
 
@@ -26,8 +26,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  LPParseConnect: 676e81e0acd3493b190944008ed32f94b5b15fa1
-  Parse: b7a77b20b8a6dede8058da1e2b339593578ce158
+  LPParseConnect: 5e621bb6d3fe94bc252a0cdf7a905ef1a54bf1ed
+  Parse: 7daa8804b876d250a65420534c97d2d786c3b0b4
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
 PODFILE CHECKSUM: 572db4e46b7fe54a52277480fb6b177731f17556

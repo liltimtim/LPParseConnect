@@ -41,10 +41,10 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol, Val
         provider?.authenticate(username: username, password: password)
     }
     
-    public func didEmit(error: Error) {
+    public func didEmit(err: Error) {
         loginBtn.endActivity()
         
-        self.present(UIAlertController.createErrorAlert(error: error), animated: true, completion: nil)
+        self.present(UIAlertController.createErrorAlert(error: err), animated: true, completion: nil)
     }
     
     open func didAuthenticate() {

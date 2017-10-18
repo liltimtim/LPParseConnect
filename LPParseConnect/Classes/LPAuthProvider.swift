@@ -8,12 +8,13 @@
 
 import Foundation
 import Parse
+import LPCommonUI
 @objc public protocol LPAuthProviderProtocol: class {
     weak var delegate:LPAuthEmittableProtocol? { get set }
     
 }
 
-@objc public protocol LPAuthEmittableProtocol: class, LPEmittableProtocol {
+@objc public protocol LPAuthEmittableProtocol: class, ProviderDelegate {
     @objc optional func didAuthenticate()
     @objc optional func didSignup()
 }
@@ -31,13 +32,13 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
     open func authenticate(username: String, password: String) {
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if error != nil {
-                self.delegate?.didEmit(error: error ?? AuthorizationError.unknown)
+                self.delegate?.didEmit(err: error ?? AuthorizationError.unknown)
                 return
             }
             
             // check null user
             guard user != nil else {
-                self.delegate?.didEmit(error: AuthorizationError.missingUser)
+                self.delegate?.didEmit(err: AuthorizationError.missingUser)
                 return
             }
             
@@ -52,11 +53,11 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
         user.password = password
         user.signUpInBackground { (success, error) in
             guard error == nil else {
-                self.delegate?.didEmit(error: error ?? AuthorizationError.unknown)
+                self.delegate?.didEmit(err: error ?? AuthorizationError.unknown)
                 return
             }
             guard success == true else {
-                self.delegate?.didEmit(error: AuthorizationError.unknown)
+                self.delegate?.didEmit(err: AuthorizationError.unknown)
                 return
             }
             self.authenticate(username: username, password: password)

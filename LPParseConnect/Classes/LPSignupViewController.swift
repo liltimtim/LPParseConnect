@@ -57,9 +57,9 @@ open class LPSignupViewController: UIViewController {
 }
 
 extension LPSignupViewController : LPAuthEmittableProtocol {
-    public func didEmit(error: Error) {
+    public func didEmit(err: Error) {
         signupBtn.endActivity()
-        self.present(UIAlertController.createErrorAlert(error: error), animated: true, completion: nil)
+        self.present(UIAlertController.createErrorAlert(error: err), animated: true, completion: nil)
     }
     
     public func didAuthenticate() {

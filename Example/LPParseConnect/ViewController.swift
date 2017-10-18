@@ -41,7 +41,7 @@ extension ViewController : LPAuthEmittableProtocol {
         pushProvider.registerPushNotifications(options: [.alert, .badge, .sound])
     }
     
-    func didEmit(error: Error) {
+    func didEmit(err: Error) {
         authProvider?.authenticate(username: "liltimtim", password: "password")
     }
     

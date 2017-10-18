@@ -38,14 +38,14 @@ class MockStandardAuthProvider: StandardAuthProvider {
         if shouldAuthSuccess {
             self.delegate?.didAuthenticate?()
         } else {
-            self.delegate?.didEmit(error: AuthorizationError.unknown)
+            self.delegate?.didEmit(err: AuthorizationError.unknown)
         }
     }
 }
 
 extension LPAuthentication_Tests : LPAuthEmittableProtocol {
-    func didEmit(error: Error) {
-        NotificationCenter.default.post(name: NSNotification.Name.init("didEmitError"), object: error)
+    func didEmit(err: Error) {
+        NotificationCenter.default.post(name: NSNotification.Name.init("didEmitError"), object: err)
     }
     
     func didAuthenticate() {

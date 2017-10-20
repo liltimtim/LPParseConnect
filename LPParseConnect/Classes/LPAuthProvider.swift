@@ -14,7 +14,7 @@ import LPCommonUI
     
 }
 
-@objc public protocol LPAuthEmittableProtocol: class, ProviderDelegate {
+@objc public protocol LPAuthEmittableProtocol: class, LPEmittableError {
     @objc optional func didAuthenticate()
     @objc optional func didSignup()
 }
@@ -32,13 +32,13 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
     open func authenticate(username: String, password: String) {
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if error != nil {
-                self.delegate?.didEmit(err: error ?? AuthorizationError.unknown)
+                self.delegate?.didEmit(error: error ?? AuthorizationError.unknown)
                 return
             }
             
             // check null user
             guard user != nil else {
-                self.delegate?.didEmit(err: AuthorizationError.missingUser)
+                self.delegate?.didEmit(error: AuthorizationError.missingUser)
                 return
             }
             
@@ -53,11 +53,11 @@ open class StandardAuthProvider : LPAuthProviderProtocol {
         user.password = password
         user.signUpInBackground { (success, error) in
             guard error == nil else {
-                self.delegate?.didEmit(err: error ?? AuthorizationError.unknown)
+                self.delegate?.didEmit(error: error ?? AuthorizationError.unknown)
                 return
             }
             guard success == true else {
-                self.delegate?.didEmit(err: AuthorizationError.unknown)
+                self.delegate?.didEmit(error: AuthorizationError.unknown)
                 return
             }
             self.authenticate(username: username, password: password)

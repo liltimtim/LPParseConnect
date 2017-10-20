@@ -12,8 +12,8 @@ import Parse
 import LPCommonUI
 @available (iOS 10, *)
 open class LPPushServices: NSObject {
-    weak var delegate:ProviderDelegate?
-    public init(delegate: ProviderDelegate?) {
+    weak var delegate:LPEmittableError?
+    public init(delegate: LPEmittableError?) {
         super.init()
         self.delegate = delegate
     }
@@ -28,7 +28,7 @@ open class LPPushServices: NSObject {
             if error == nil {
                 UIApplication.shared.registerForRemoteNotifications()
             } else {
-                self.delegate?.didEmit(err: error!)
+                self.delegate?.didEmit(error: error!)
             }
         }
     }

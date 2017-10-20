@@ -1,6 +1,6 @@
 PODS:
   - Bolts/Tasks (1.8.4)
-  - LPCommonUI (1.0.6)
+  - LPCommonUI (1.0.7)
   - LPParseConnect (0.1.3):
     - LPCommonUI
     - Parse
@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   LPCommonUI:
-    :commit: f676d460ac0e31a6dad60ecda94e4182fd6694f6
+    :commit: 61cb8d17392f525bbb901ceb2667194a964524c7
     :git: https://github.com/Launchpeer/LPCommonUI_iOS.git
   SwiftValidator:
     :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
@@ -34,7 +34,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  LPCommonUI: 269af439e4fba32a8f298d203621362b0fc21ac0
+  LPCommonUI: 981f6c60176ec1db912c7383a657f9b244163ad3
   LPParseConnect: ddfd3bfb6c289de1290b507bc1282c74bd74bdc9
   Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af

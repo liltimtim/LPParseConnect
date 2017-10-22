@@ -31,7 +31,7 @@ open class LPLoginViewController: UIViewController, LPAuthEmittableProtocol, Val
         super.didReceiveMemoryWarning()
     }
     
-    internal func loginPressed() {
+    @objc internal func loginPressed() {
         loginBtn.beginActivity()
         validator.validate(self)
     }

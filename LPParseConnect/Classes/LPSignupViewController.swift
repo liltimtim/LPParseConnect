@@ -33,7 +33,7 @@ open class LPSignupViewController: UIViewController {
 
     }
     
-    open func signUpPressed() {
+    @objc open func signUpPressed() {
         signupBtn.beginActivity()
         validator.validate(self)
     }
